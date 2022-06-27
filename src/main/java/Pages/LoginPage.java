@@ -29,6 +29,8 @@ public class LoginPage {
    /*     driver.switchTo().frame(1);
         driver.findElement(captchabox).click();
         driver.switchTo().parentFrame();*/
+        writeUsername("naveed779");
+        writePassword("Pakistan.652021");
         driver.findElement(signInButton).click();
         return new HomePage(driver);
     }

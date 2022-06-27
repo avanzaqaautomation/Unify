@@ -10,6 +10,9 @@ import java.util.concurrent.TimeUnit;
 
 public class HomePage {
     private WebDriver driver;
+    private By openBtn=By.xpath("//body[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/p[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/p[2]/span[1]");
+    private  By nextBtn=By.xpath("//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/p[1]/div[4]/div[1]/div[1]/div[2]/div[1]/nav[1]/ul[1]/li[4]/button[1]/*[1]");
+    private  By WebBtn=By.xpath("/html[1]/body[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/button[1]");
     private By nameTxt=By.xpath("//input[@id='name']");
     private By saveBtn=By.xpath("/html/body/div[10]/div[3]/div[1]/div[2]/button[2]");
     private By popup=By.xpath("//div[contains(text(),'Project Created Successfully')]");
@@ -48,4 +51,15 @@ public class HomePage {
     public String popUpText(){
         return driver.findElement(popup).getText();
     }
+    public void clickWebBtn(){
+        driver.findElement(WebBtn).click();
+    }
+    public void clickNextBtn(){
+        driver.findElement(nextBtn).click();
+    }
+    public ProjectScren clickOpenBtn(){
+        driver.findElement(openBtn).click();
+        return new ProjectScren(driver);
+    }
 }
+

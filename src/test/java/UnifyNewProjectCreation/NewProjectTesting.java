@@ -1,4 +1,4 @@
-package LoginTests;
+package UnifyNewProjectCreation;
 
 import Base.BaseTest;
 import Pages.HomePage;

@@ -37,6 +37,7 @@ public class LoginPage {
     public RegistrationPage clickRegisterLink(){
         driver.findElement(registrationLink).click();
         return new RegistrationPage(driver);
+        /*sdakdjkajdkkks*/
     }
 
 }
